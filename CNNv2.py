@@ -5,7 +5,7 @@ import keras
 
 def Nvidia_CNN(shape):
     model = keras.models.Sequential()
-    #model.add((keras.layers.BatchNormalization(epsilon=0.001, axis=1,input_shape=shape)))
+    model.add((keras.layers.BatchNormalization(epsilon=0.001, axis=1,input_shape=shape)))
 
     model.add(keras.layers.Conv2D(filters=12, kernel_size=(5,5), strides=(1,1), activation='elu'))
     model.add(keras.layers.MaxPooling2D(pool_size=(2,2),strides=(2,2)))
